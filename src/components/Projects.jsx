@@ -7,15 +7,14 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "Object Movement Detection & Hand Gesture Recognition",
+    title: "Alzheimer's Disease Prediction",
     description:
-      "A system to detect object movement and count fingers in real-time using frame differencing techniques. Utilized image processing algorithms for motion identification and hand gesture analysis.",
-    tags: ["Python", "OpenCV", "Computer Vision", "Image Processing"],
-    gradient: "from-primary-500 to-secondary-500",
-    icon: "🤖",
-    github:
-      "https://github.com/AhmedHussain-56/Object-Movement-Detection-and-Hand-and-Finger-Counting-Using-Frame-Differencing",
-    demo: "https://ahmedhussain-56-object-movement-detection-and-hand-a-app-utfiue.streamlit.app/",
+      "An end-to-end medical AI application that automates the early-stage detection of Alzheimer's Disease from MRI brain scans. Uses transfer learning and a lightweight TFLite inference engine optimized for production environments.",
+    tags: ["Python", "TensorFlow Lite", "Flask", "OpenCV", "SQLite", "Bootstrap 5"],
+    gradient: "from-emerald-500 to-secondary-500",
+    icon: "🧠",
+    github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
+    demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
   },
   {
     id: 2,
@@ -31,6 +30,18 @@ const projects = [
   },
   {
     id: 3,
+    title: "Object Movement Detection & Hand Gesture Recognition",
+    description:
+      "A system to detect object movement and count fingers in real-time using frame differencing techniques. Utilized image processing algorithms for motion identification and hand gesture analysis.",
+    tags: ["Python", "OpenCV", "Computer Vision", "Image Processing"],
+    gradient: "from-primary-500 to-secondary-500",
+    icon: "🤖",
+    github:
+      "https://github.com/AhmedHussain-56/Object-Movement-Detection-and-Hand-and-Finger-Counting-Using-Frame-Differencing",
+    demo: "https://ahmedhussain-56-object-movement-detection-and-hand-a-app-utfiue.streamlit.app/",
+  },
+  {
+    id: 4,
     title: "EduTrack ERP - Low-Cost Web Application",
     description:
       "A cost-effective ERP system for small educational institutions with modules for admissions, fees, and student records. Integrated with Google Sheets and Apps Script for real-time automation.",
@@ -39,17 +50,6 @@ const projects = [
     icon: "📚",
     github: "https://github.com/AhmedHussain-56/EDUTACK-ERP-System",
     demo: "https://edutack-erp-system.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Alzheimer's Disease Prediction",
-    description:
-      "An end-to-end medical AI application that automates the early-stage detection of Alzheimer's Disease from MRI brain scans. Uses transfer learning and a lightweight TFLite inference engine optimized for production environments.",
-    tags: ["Python", "TensorFlow Lite", "Flask", "OpenCV", "SQLite", "Bootstrap 5"],
-    gradient: "from-emerald-500 to-secondary-500",
-    icon: "🧠",
-    github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
-    demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
   },
 ];
 
