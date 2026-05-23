@@ -40,6 +40,17 @@ const projects = [
     github: "https://github.com/AhmedHussain-56/EDUTACK-ERP-System",
     demo: "https://edutack-erp-system.vercel.app/",
   },
+  {
+    id: 4,
+    title: "Alzheimer's Disease Prediction",
+    description:
+      "An end-to-end medical AI application that automates the early-stage detection of Alzheimer's Disease from MRI brain scans. Uses transfer learning and a lightweight TFLite inference engine optimized for production environments.",
+    tags: ["Python", "TensorFlow Lite", "Flask", "OpenCV", "SQLite", "Bootstrap 5"],
+    gradient: "from-emerald-500 to-secondary-500",
+    icon: "🧠",
+    github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
+    demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
+  },
 ];
 
 function Projects() {
@@ -104,7 +115,7 @@ function Projects() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8"
           >
             {projects.map((project, index) => (
               <motion.div
