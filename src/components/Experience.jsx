@@ -27,7 +27,7 @@ const educationList = [
     id: 1,
     degree: "Bachelor of Technology (B. Tech) - Computer Science Engineering",
     institution: "Sree Chaitanya College of Engineering, Karimnagar",
-    period: "Graduating July 2026",
+    period: "Graduated July 2026",
     score: "CGPA: 8.24",
     highlight: true,
   },

@@ -37,7 +37,7 @@ function Footer() {
               Ahmed Hussain
             </motion.a>
             <p className="text-slate-400 mt-2 text-sm">
-              Flutter Developer | AI & ML Enthusiast
+              Data Analyst | Python | SQL
             </p>
           </div>
 
