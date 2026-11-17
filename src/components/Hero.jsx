@@ -97,7 +97,7 @@ function Hero() {
             <span className="mx-3 text-slate-600">|</span>
             <span className="text-secondary-400">AI & ML Enthusiast</span>
             <span className="mx-3 text-slate-600">|</span>
-            <span className="text-accent-400">CSE Student</span>
+            <span className="text-accent-400">CSE Graduate</span>
           </p>
         </motion.div>
 
@@ -108,9 +108,9 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Final-year B.Tech student passionate about building beautiful mobile
-          apps, exploring machine learning, and crafting exceptional user
-          experiences.
+          B.Tech CSE graduate skilled in C, Python, SQL, and Flutter. Passionate
+          about developing high-performance mobile & web applications with clean
+          UI design and seamless user experience.
         </motion.p>
 
         {/* CTA Buttons */}

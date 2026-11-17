@@ -7,41 +7,60 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "Alzheimer's Disease Prediction",
+    title: "Alzheimer’s Disease Prediction using IoMT & Deep Learning",
     description:
-      "An end-to-end medical AI application that automates the early-stage detection of Alzheimer's Disease from MRI brain scans. Uses transfer learning and a lightweight TFLite inference engine optimized for production environments.",
-    tags: ["Python", "TensorFlow Lite", "Flask", "OpenCV", "SQLite", "Bootstrap 5"],
+      "Designed and developed an IoMT-enabled deep learning system using ResNet-101 (transfer learning) and U-Net for MRI-based Alzheimer’s classification. Achieved ~89% accuracy and built a scalable web platform for real-time prediction, model training, and performance analytics.",
+    tags: ["Python", "ResNet-101", "U-Net", "IoMT", "Deep Learning", "Flask", "OpenCV"],
     gradient: "from-emerald-500 to-secondary-500",
     icon: "🧠",
     github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
     demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
+    featured: true,
+    highlight: "~89% Accuracy • IoMT",
   },
   {
     id: 2,
-    title: "NLP to SQL Query Conversion",
+    title: "Multi-Modal Misinformation & Deepfake Detection System",
     description:
-      "A web-based tool that converts natural language questions into accurate SQL queries using transformer-based NLP models. Features a user-friendly interface for database querying.",
-    tags: ["Python", "Transformers", "NLP", "Streamlit", "Django", "SQLite"],
+      "A unified multi-modal AI system combining EfficientNet-B3 for frame-by-frame image & video deepfake detection and a BERT Transformer for fake news text classification. Uses MTCNN face extraction and achieved 91.07% accuracy on hybrid datasets (Celeb-DF & GANs) with a 3-tab Streamlit UI.",
+    tags: ["PyTorch", "EfficientNet-B3", "BERT Transformer", "MTCNN", "OpenCV", "Streamlit", "Python"],
+    gradient: "from-rose-500 to-indigo-500",
+    icon: "🛡️",
+    github: "https://github.com/AhmedHussain-56/Deepfake_Detection_System",
+    demo: null,
+    featured: false,
+    highlight: "91.07% Accuracy • Multi-Modal",
+  },
+  {
+    id: 3,
+    title: "Natural Language to SQL Query Conversion using AI Transformer Models",
+    description:
+      "A web-based tool that converts natural language questions into accurate SQL queries using transformer-based NLP models. Focused on integrating model predictions with a user-friendly interface for database querying.",
+    tags: ["Python", "Transformer Models", "NLP", "Streamlit", "Django", "SQLite"],
     gradient: "from-secondary-500 to-accent-500",
     icon: "🗃️",
     github:
       "https://github.com/AhmedHussain-56/NLP-to-SQL-Query-Conversion-Using-Transformer-Models",
     demo: "https://nlp-to-sql-query.onrender.com/",
+    featured: false,
+    highlight: "NLP Transformer",
   },
   {
-    id: 3,
-    title: "Object Movement Detection & Hand Gesture Recognition",
+    id: 4,
+    title: "Object Movement Detection and Hand and Finger Counting Using Frame Differencing",
     description:
-      "A system to detect object movement and count fingers in real-time using frame differencing techniques. Utilized image processing algorithms for motion identification and hand gesture analysis.",
+      "Developed a system to detect object movement and count fingers in real-time using frame differencing techniques. Utilized image processing algorithms to identify motion and perform hand gesture analysis.",
     tags: ["Python", "OpenCV", "Computer Vision", "Image Processing"],
     gradient: "from-primary-500 to-secondary-500",
     icon: "🤖",
     github:
       "https://github.com/AhmedHussain-56/Object-Movement-Detection-and-Hand-and-Finger-Counting-Using-Frame-Differencing",
     demo: "https://ahmedhussain-56-object-movement-detection-and-hand-a-app-utfiue.streamlit.app/",
+    featured: false,
+    highlight: "Real-time Vision",
   },
   {
-    id: 4,
+    id: 5,
     title: "EduTrack ERP - Low-Cost Web Application",
     description:
       "A cost-effective ERP system for small educational institutions with modules for admissions, fees, and student records. Integrated with Google Sheets and Apps Script for real-time automation.",
@@ -50,6 +69,8 @@ const projects = [
     icon: "📚",
     github: "https://github.com/AhmedHussain-56/EDUTACK-ERP-System",
     demo: "https://edutack-erp-system.vercel.app/",
+    featured: false,
+    highlight: "Full-Stack Automation",
   },
 ];
 
@@ -121,66 +142,82 @@ function Projects() {
               <motion.div
                 key={project.id}
                 variants={cardVariants}
-                className="group relative"
+                className={`group relative ${
+                  project.featured ? "md:col-span-2" : ""
+                }`}
               >
                 <div className="gradient-border h-full card-hover">
-                  <div className="p-6 h-full flex flex-col">
-                    {/* Project Icon */}
-                    <motion.div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-2xl mb-4`}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                    >
-                      {project.icon}
-                    </motion.div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-outfit font-semibold text-white mb-3 group-hover:text-primary-400 transition-colors">
-                      {project.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
-                      {project.description}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 text-xs rounded-full bg-dark-700 text-slate-300 border border-slate-700"
+                  <div className="p-6 md:p-8 h-full flex flex-col justify-between">
+                    <div>
+                      {/* Top Row: Icon + Highlight Badge */}
+                      <div className="flex items-center justify-between mb-5 gap-3">
+                        <motion.div
+                          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-2xl shadow-lg`}
+                          whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          {tag}
-                        </span>
-                      ))}
+                          {project.icon}
+                        </motion.div>
+
+                        {project.highlight && (
+                          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-dark-700/80 text-secondary-300 border border-secondary-500/30 tracking-wide">
+                            {project.highlight}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl md:text-2xl font-outfit font-semibold text-white mb-3 group-hover:text-primary-400 transition-colors">
+                        {project.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                        {project.description}
+                      </p>
                     </div>
 
-                    {/* Actions */}
-                    <div className="flex items-center gap-4 pt-4 border-t border-slate-700/50">
-                      <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
-                      >
-                        <FaGithub className="text-lg" />
-                        Code
-                      </motion.a>
-                      {project.demo && (
-                        <motion.a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="flex items-center gap-2 text-sm text-slate-400 hover:text-primary-400 transition-colors"
-                        >
-                          <HiExternalLink className="text-lg" />
-                          Live Demo
-                        </motion.a>
-                      )}
+                    <div>
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-3 py-1 text-xs rounded-full bg-dark-700 text-slate-300 border border-slate-700/80 hover:border-slate-500 transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Actions */}
+                      <div className="flex items-center gap-5 pt-4 border-t border-slate-700/50">
+                        {project.github && (
+                          <motion.a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
+                          >
+                            <FaGithub className="text-lg" />
+                            Repository
+                          </motion.a>
+                        )}
+                        {project.demo && (
+                          <motion.a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2 text-sm text-primary-400 hover:text-primary-300 transition-colors font-medium"
+                          >
+                            <HiExternalLink className="text-lg" />
+                            Live Demo
+                          </motion.a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

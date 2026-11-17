@@ -19,7 +19,7 @@ const certifications = [
     id: 2,
     title: "IBM SkillsBuild Internship - Data Analytics (CSRBOX)",
     issuer: "IBM",
-    date: "November 2023",
+    date: "Nov 14, 2023",
     description:
       "Completed structured training in data analytics concepts and applied learning modules.",
     icon: FaChartBar,

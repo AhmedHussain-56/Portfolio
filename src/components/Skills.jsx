@@ -15,30 +15,41 @@ import {
   SiAndroidstudio,
   SiC,
   SiMysql,
+  SiSqlite,
+  SiUbuntu,
+  SiPytorch,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { TbBrandReactNative } from "react-icons/tb";
+import { FaWindows, FaJava } from "react-icons/fa";
 
 const skillCategories = [
   {
-    title: "Languages",
+    title: "Programming Languages",
     color: "from-primary-500 to-primary-600",
     skills: [
       { name: "C", icon: SiC },
-      { name: "Java", icon: FaJava },
       { name: "Python", icon: SiPython },
       { name: "Dart", icon: SiDart },
       { name: "JavaScript", icon: SiJavascript },
+      { name: "Java", icon: FaJava },
     ],
   },
   {
-    title: "Frameworks",
+    title: "Frameworks & AI",
     color: "from-secondary-500 to-secondary-600",
     skills: [
       { name: "Flutter", icon: SiFlutter },
       { name: "Django", icon: SiDjango },
       { name: "Streamlit", icon: SiStreamlit },
-      { name: "React", icon: TbBrandReactNative },
+      { name: "PyTorch", icon: SiPytorch },
+    ],
+  },
+  {
+    title: "Database Management",
+    color: "from-emerald-500 to-teal-600",
+    skills: [
+      { name: "SQL", icon: SiMysql },
+      { name: "MySQL", icon: SiMysql },
+      { name: "SQLite", icon: SiSqlite },
     ],
   },
   {
@@ -51,13 +62,20 @@ const skillCategories = [
     ],
   },
   {
-    title: "Tools & Databases",
-    color: "from-green-500 to-emerald-600",
+    title: "Operating Systems",
+    color: "from-blue-500 to-cyan-600",
+    skills: [
+      { name: "Windows", icon: FaWindows },
+      { name: "Ubuntu", icon: SiUbuntu },
+    ],
+  },
+  {
+    title: "Tools & Design",
+    color: "from-purple-500 to-pink-600",
     skills: [
       { name: "Android Studio", icon: SiAndroidstudio },
-      { name: "Git/GitHub", icon: SiGithub },
+      { name: "GitHub", icon: SiGithub },
       { name: "Figma", icon: SiFigma },
-      { name: "SQL", icon: SiMysql },
     ],
   },
 ];
@@ -123,7 +141,7 @@ function Skills() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {skillCategories.map((category, categoryIndex) => (
               <motion.div

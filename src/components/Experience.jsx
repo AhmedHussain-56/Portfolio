@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { HiBriefcase, HiCalendar, HiLocationMarker } from "react-icons/hi";
+import {
+  HiBriefcase,
+  HiCalendar,
+  HiLocationMarker,
+  HiAcademicCap,
+} from "react-icons/hi";
 
 const experiences = [
   {
@@ -9,11 +14,38 @@ const experiences = [
     title: "Flutter Intern",
     company: "Team Up Company",
     location: "IT Tower, Karimnagar",
-    period: "Dec 2025 - Present",
+    period: "Dec 2025 – March 2026",
     description:
-      "Designed and implemented Flutter UI screens for a Health Diary application. Working on creating intuitive and user-friendly interfaces for health tracking features.",
+      "Designed and implemented Flutter UI screens for a Health Diary application. Created intuitive, performant, and user-friendly interfaces for health tracking features.",
     skills: ["Flutter", "Dart", "UI/UX", "Mobile Development"],
-    current: true,
+    current: false,
+  },
+];
+
+const educationList = [
+  {
+    id: 1,
+    degree: "Bachelor of Technology (B. Tech) - Computer Science Engineering",
+    institution: "Sree Chaitanya College of Engineering, Karimnagar",
+    period: "Graduating July 2026",
+    score: "CGPA: 8.24",
+    highlight: true,
+  },
+  {
+    id: 2,
+    degree: "Telangana State Board of Intermediate Education",
+    institution: "Trinity Junior College, Karimnagar",
+    period: "Apr 2022",
+    score: "CGPA: 8.9",
+    highlight: false,
+  },
+  {
+    id: 3,
+    degree: "Telangana Secondary School Certificate (SSC)",
+    institution: "Gowtham Model School, Karimnagar",
+    period: "May 2020",
+    score: "CGPA: 10.0",
+    highlight: false,
   },
 ];
 
@@ -135,27 +167,45 @@ function Experience() {
             transition={{ delay: 0.6 }}
             className="mt-16"
           >
-            <h3 className="text-2xl font-outfit font-semibold text-center text-white mb-8">
-              Education
-            </h3>
-            <div className="max-w-3xl mx-auto gradient-border">
-              <div className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">
-                      Bachelor of Technology (B.Tech) - Computer Science
-                      Engineering
-                    </h4>
-                    <p className="text-slate-400">
-                      Sree Chaitanya College of Engineering, Karimnagar
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-primary-400 font-semibold">CGPA: 8.08</p>
-                    <p className="text-sm text-slate-500">2022 - July 2026</p>
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <HiAcademicCap className="text-3xl text-primary-400" />
+              <h3 className="text-2xl font-outfit font-semibold text-center text-white">
+                Education
+              </h3>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {educationList.map((edu) => (
+                <div
+                  key={edu.id}
+                  className="gradient-border card-hover"
+                >
+                  <div className="p-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">
+                          {edu.degree}
+                        </h4>
+                        <p className="text-slate-400 text-sm mt-1">
+                          {edu.institution}
+                        </p>
+                      </div>
+                      <div className="md:text-right flex md:flex-col justify-between items-start md:items-end gap-1">
+                        <span
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                            edu.highlight
+                              ? "bg-primary-500/20 text-primary-300 border border-primary-500/30"
+                              : "bg-dark-700 text-secondary-400 border border-slate-700"
+                          }`}
+                        >
+                          {edu.score}
+                        </span>
+                        <p className="text-xs text-slate-500 mt-1">{edu.period}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>

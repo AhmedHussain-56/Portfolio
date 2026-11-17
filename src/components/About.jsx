@@ -9,8 +9,8 @@ function About() {
 
   const stats = [
     { icon: HiCode, value: "10+", label: "Projects Built" },
-    { icon: HiLightningBolt, value: "3+", label: "Technologies" },
-    { icon: HiAcademicCap, value: "8.08", label: "CGPA" },
+    { icon: HiLightningBolt, value: "4+", label: "Core Technologies" },
+    { icon: HiAcademicCap, value: "8.24", label: "CGPA" },
   ];
 
   return (
@@ -119,19 +119,20 @@ function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h3 className="text-2xl font-outfit font-semibold mb-4 text-white">
-                Building the Future with Code
+                Building Modern Apps with Clean Code
               </h3>
               <p className="text-slate-400 leading-relaxed mb-6">
-                I'm a final-year B.Tech CSE student at Sree Chaitanya College of
-                Engineering, Karimnagar, with a passion for building innovative
-                solutions. I specialize in Flutter development and have a keen
-                interest in AI & Machine Learning.
+                I'm a B.Tech CSE Graduate at Sree Chaitanya College of
+                Engineering, Karimnagar, skilled in C, Python, SQL, and Flutter.
+                I specialize in developing mobile and web applications with a
+                strong focus on performance, clean UI design, and seamless user
+                experience.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
-                With experience in mobile and web application development, I
-                focus on creating clean, performant, and user-friendly
-                experiences. I'm constantly learning new technologies and enjoy
-                solving complex problems through code.
+                From building medical AI systems with Deep Learning to
+                engineering intuitive cross-platform Flutter applications, I
+                love solving complex problems and continuously enhancing modern
+                app development techniques.
               </p>
 
               {/* Stats */}
