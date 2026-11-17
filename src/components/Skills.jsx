@@ -2,80 +2,81 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  SiFlutter,
-  SiDart,
   SiPython,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
+  SiC,
+  SiPandas,
+  SiNumpy,
   SiDjango,
   SiStreamlit,
   SiGithub,
-  SiFigma,
-  SiAndroidstudio,
-  SiC,
   SiMysql,
   SiSqlite,
-  SiUbuntu,
-  SiPytorch,
 } from "react-icons/si";
-import { FaWindows, FaJava } from "react-icons/fa";
+import {
+  FaDatabase,
+  FaFileExcel,
+  FaChartLine,
+  FaChartPie,
+  FaSearch,
+} from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { TbChartBar } from "react-icons/tb";
+import { HiSparkles } from "react-icons/hi";
 
 const skillCategories = [
   {
     title: "Programming Languages",
     color: "from-primary-500 to-primary-600",
     skills: [
-      { name: "C", icon: SiC },
       { name: "Python", icon: SiPython },
-      { name: "Dart", icon: SiDart },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Java", icon: FaJava },
+      { name: "SQL", icon: FaDatabase },
+      { name: "C", icon: SiC },
     ],
   },
   {
-    title: "Frameworks & AI",
+    title: "Data Analytics & EDA",
     color: "from-secondary-500 to-secondary-600",
     skills: [
-      { name: "Flutter", icon: SiFlutter },
-      { name: "Django", icon: SiDjango },
-      { name: "Streamlit", icon: SiStreamlit },
-      { name: "PyTorch", icon: SiPytorch },
+      { name: "Data Cleaning", icon: HiSparkles },
+      { name: "Exploratory Data Analysis (EDA)", icon: FaChartLine },
+      { name: "Data Interpretation", icon: FaSearch },
     ],
   },
   {
-    title: "Database Management",
+    title: "Data Visualization",
+    color: "from-amber-500 to-orange-600",
+    skills: [
+      { name: "Power BI", icon: TbChartBar },
+      { name: "Microsoft Excel", icon: FaFileExcel },
+      { name: "Matplotlib", icon: FaChartPie },
+    ],
+  },
+  {
+    title: "Python Data Libraries",
     color: "from-emerald-500 to-teal-600",
     skills: [
-      { name: "SQL", icon: SiMysql },
-      { name: "MySQL", icon: SiMysql },
-      { name: "SQLite", icon: SiSqlite },
+      { name: "Pandas", icon: SiPandas },
+      { name: "NumPy", icon: SiNumpy },
+      { name: "Matplotlib", icon: FaChartPie },
     ],
   },
   {
-    title: "Web Technologies",
-    color: "from-accent-500 to-accent-600",
-    skills: [
-      { name: "HTML5", icon: SiHtml5 },
-      { name: "CSS3", icon: SiCss3 },
-      { name: "JavaScript", icon: SiJavascript },
-    ],
-  },
-  {
-    title: "Operating Systems",
+    title: "Databases & Querying",
     color: "from-blue-500 to-cyan-600",
     skills: [
-      { name: "Windows", icon: FaWindows },
-      { name: "Ubuntu", icon: SiUbuntu },
+      { name: "SQL", icon: FaDatabase },
+      { name: "SQLite", icon: SiSqlite },
+      { name: "MySQL", icon: SiMysql },
     ],
   },
   {
-    title: "Tools & Design",
+    title: "Frameworks & Tools",
     color: "from-purple-500 to-pink-600",
     skills: [
-      { name: "Android Studio", icon: SiAndroidstudio },
+      { name: "Streamlit", icon: SiStreamlit },
+      { name: "Django", icon: SiDjango },
       { name: "GitHub", icon: SiGithub },
-      { name: "Figma", icon: SiFigma },
+      { name: "VS Code", icon: VscVscode },
     ],
   },
 ];
@@ -132,7 +133,7 @@ function Skills() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-slate-400 mt-4 max-w-2xl mx-auto"
             >
-              Technologies and tools I use to bring ideas to life
+              Analytical methodologies, querying languages, and visualization tools I use to uncover data insights
             </motion.p>
           </div>
 

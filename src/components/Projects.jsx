@@ -7,43 +7,43 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "Alzheimer’s Disease Prediction using IoMT & Deep Learning",
-    description:
-      "Designed and developed an IoMT-enabled deep learning system using ResNet-101 (transfer learning) and U-Net for MRI-based Alzheimer’s classification. Achieved ~89% accuracy and built a scalable web platform for real-time prediction, model training, and performance analytics.",
-    tags: ["Python", "ResNet-101", "U-Net", "IoMT", "Deep Learning", "Flask", "OpenCV"],
-    gradient: "from-emerald-500 to-secondary-500",
-    icon: "🧠",
-    github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
-    demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
-    featured: true,
-    highlight: "~89% Accuracy • IoMT",
-  },
-  {
-    id: 2,
-    title: "Multi-Modal Misinformation & Deepfake Detection System",
-    description:
-      "A unified multi-modal AI system combining EfficientNet-B3 for frame-by-frame image & video deepfake detection and a BERT Transformer for fake news text classification. Uses MTCNN face extraction and achieved 91.07% accuracy on hybrid datasets (Celeb-DF & GANs) with a 3-tab Streamlit UI.",
-    tags: ["PyTorch", "EfficientNet-B3", "BERT Transformer", "MTCNN", "OpenCV", "Streamlit", "Python"],
-    gradient: "from-rose-500 to-indigo-500",
-    icon: "🛡️",
-    github: "https://github.com/AhmedHussain-56/Deepfake_Detection_System",
-    demo: null,
-    featured: false,
-    highlight: "91.07% Accuracy • Multi-Modal",
-  },
-  {
-    id: 3,
     title: "Natural Language to SQL Query Conversion using AI Transformer Models",
     description:
-      "A web-based tool that converts natural language questions into accurate SQL queries using transformer-based NLP models. Focused on integrating model predictions with a user-friendly interface for database querying.",
-    tags: ["Python", "Transformer Models", "NLP", "Streamlit", "Django", "SQLite"],
+      "Developed an AI-powered application that converts natural language questions into accurate SQL queries using Python and Transformer-based NLP models. Integrated SQLite database querying to retrieve information dynamically, paired with an interactive Streamlit and Django web interface.",
+    tags: ["SQL", "Python", "SQLite", "Transformer Models", "Streamlit", "Django", "NLP"],
     gradient: "from-secondary-500 to-accent-500",
     icon: "🗃️",
     github:
       "https://github.com/AhmedHussain-56/NLP-to-SQL-Query-Conversion-Using-Transformer-Models",
     demo: "https://nlp-to-sql-query.onrender.com/",
+    featured: true,
+    highlight: "SQL Generation • Database Querying",
+  },
+  {
+    id: 2,
+    title: "Deepfake Detection System using EfficientNet-B3",
+    description:
+      "Developed a deepfake detection model using Python and EfficientNet-B3. Prepared, cleaned, and processed real and AI-generated face datasets for model training and evaluation—achieving 91.07% accuracy and an F1-score of 91.01%.",
+    tags: ["Python", "EfficientNet-B3", "Data Preprocessing", "PyTorch", "Model Evaluation", "EDA"],
+    gradient: "from-rose-500 to-indigo-500",
+    icon: "🛡️",
+    github: "https://github.com/AhmedHussain-56/Deepfake_Detection_System",
+    demo: null,
     featured: false,
-    highlight: "NLP Transformer",
+    highlight: "91.07% Accuracy • 91.01% F1-Score",
+  },
+  {
+    id: 3,
+    title: "Alzheimer's Disease Prediction using IoMT & Deep Learning",
+    description:
+      "Developed a deep learning system using ResNet-101 and U-Net for MRI-based Alzheimer's disease classification. Evaluated model performance, achieving ~89% accuracy, and built a web platform supporting prediction, model training, and performance analytics.",
+    tags: ["Python", "ResNet-101", "U-Net", "Performance Analytics", "Model Evaluation", "Flask"],
+    gradient: "from-emerald-500 to-secondary-500",
+    icon: "🧠",
+    github: "https://github.com/AhmedHussain-56/Alzheimer-Disease-Prediction",
+    demo: "https://alzheimer-disease-prediction-xm6y.onrender.com",
+    featured: false,
+    highlight: "~89% Accuracy • Performance Analytics",
   },
   {
     id: 4,
@@ -57,20 +57,20 @@ const projects = [
       "https://github.com/AhmedHussain-56/Object-Movement-Detection-and-Hand-and-Finger-Counting-Using-Frame-Differencing",
     demo: "https://ahmedhussain-56-object-movement-detection-and-hand-a-app-utfiue.streamlit.app/",
     featured: false,
-    highlight: "Real-time Vision",
+    highlight: "Computer Vision • Frame Differencing",
   },
   {
     id: 5,
-    title: "EduTrack ERP - Low-Cost Web Application",
+    title: "EduTrack ERP - Data Management & Automated Reporting",
     description:
-      "A cost-effective ERP system for small educational institutions with modules for admissions, fees, and student records. Integrated with Google Sheets and Apps Script for real-time automation.",
-    tags: ["Google Sheets", "Apps Script", "JavaScript", "Web App"],
+      "A cost-effective data management and ERP system for educational institutions with modules for admissions, fees, and student records. Integrated with Google Sheets and Apps Script for automated reporting.",
+    tags: ["Google Sheets", "Apps Script", "JavaScript", "Data Management"],
     gradient: "from-accent-500 to-primary-500",
     icon: "📚",
     github: "https://github.com/AhmedHussain-56/EDUTACK-ERP-System",
     demo: "https://edutack-erp-system.vercel.app/",
     featured: false,
-    highlight: "Full-Stack Automation",
+    highlight: "Data Management • Reporting",
   },
 ];
 
@@ -126,8 +126,8 @@ function Projects() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-slate-400 mt-4 max-w-2xl mx-auto"
             >
-              A selection of projects that showcase my skills and passion for
-              building impactful solutions
+              Analytical, SQL querying, and Machine Learning projects demonstrating
+              end-to-end data processing, model evaluation, and actionable results
             </motion.p>
           </div>
 

@@ -70,7 +70,7 @@ function Hero() {
         >
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           <span className="text-sm text-slate-300">
-            Available for opportunities
+            Available for Data Analyst Opportunities
           </span>
         </motion.div>
 
@@ -93,11 +93,11 @@ function Hero() {
           className="mb-8"
         >
           <p className="text-xl md:text-2xl lg:text-3xl text-slate-300 font-light">
-            <span className="text-primary-400">Flutter Developer</span>
+            <span className="text-primary-400">Data Analyst</span>
             <span className="mx-3 text-slate-600">|</span>
-            <span className="text-secondary-400">AI & ML Enthusiast</span>
+            <span className="text-secondary-400">Python</span>
             <span className="mx-3 text-slate-600">|</span>
-            <span className="text-accent-400">CSE Graduate</span>
+            <span className="text-accent-400">SQL & Power BI</span>
           </p>
         </motion.div>
 
@@ -108,9 +108,9 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          B.Tech CSE graduate skilled in C, Python, SQL, and Flutter. Passionate
-          about developing high-performance mobile & web applications with clean
-          UI design and seamless user experience.
+          B.Tech Computer Science graduate with strong knowledge of Python, SQL,
+          Excel, and Power BI. Skilled in data cleaning, exploratory data analysis
+          (EDA), database querying, and transforming data into meaningful insights.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -126,7 +126,7 @@ function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Projects
+            View Data Projects
             <HiArrowDown className="animate-bounce" />
           </motion.button>
           <motion.button

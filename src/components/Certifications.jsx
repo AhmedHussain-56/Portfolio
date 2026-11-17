@@ -7,6 +7,26 @@ import { FaGamepad, FaChartBar, FaDatabase } from "react-icons/fa";
 const certifications = [
   {
     id: 1,
+    title: "Deloitte Data Analytics Job Simulation",
+    issuer: "Deloitte (Forage)",
+    date: "October 2025",
+    description:
+      "Performed data cleaning, exploratory analysis, and forensic-style investigation on datasets.",
+    icon: FaDatabase,
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    id: 2,
+    title: "IBM SkillsBuild Internship - Data Analytics (CSRBOX)",
+    issuer: "IBM",
+    date: "November 2023",
+    description:
+      "Completed structured training in data analytics concepts and applied learning modules.",
+    icon: FaChartBar,
+    color: "from-green-500 to-teal-500",
+  },
+  {
+    id: 3,
     title: "MyCaptain Game Development Course",
     issuer: "MyCaptain",
     date: "September 2020",
@@ -15,48 +35,33 @@ const certifications = [
     icon: FaGamepad,
     color: "from-purple-500 to-pink-500",
   },
-  {
-    id: 2,
-    title: "IBM SkillsBuild Internship - Data Analytics (CSRBOX)",
-    issuer: "IBM",
-    date: "Nov 14, 2023",
-    description:
-      "Completed structured training in data analytics concepts and applied learning modules.",
-    icon: FaChartBar,
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    id: 3,
-    title: "Deloitte Data Analytics Job Simulation",
-    issuer: "Deloitte (Forage)",
-    date: "October 2025",
-    description:
-      "Performed data cleaning, exploratory analysis, and forensic-style investigation on datasets.",
-    icon: FaDatabase,
-    color: "from-green-500 to-teal-500",
-  },
 ];
 
 const strengths = [
   {
-    title: "App Development",
+    title: "Analytical Thinking & Problem-Solving",
     description:
-      "Built functional mobile & web apps using Flutter, Django, and modern UI practices.",
+      "Strong at dissecting complex business requirements and uncovering actionable insights from raw data.",
   },
   {
-    title: "Problem-Solving",
+    title: "Logical Reasoning",
     description:
-      "Strong at analyzing problems and writing efficient, optimized code.",
+      "Solid logical foundation for evaluating metrics, data distributions, and algorithmic workflows.",
+  },
+  {
+    title: "Attention to Detail",
+    description:
+      "Meticulous approach to data validation, spotting anomalies, and ensuring rigorous data integrity.",
   },
   {
     title: "Technical Adaptability",
     description:
-      "Quick learner, comfortable with new tools, frameworks, and technologies.",
+      "Quick learner, comfortable across SQL querying, Python analytics, Excel, Power BI, and BI tools.",
   },
   {
     title: "Team Collaboration",
     description:
-      "Communicates clearly and works effectively in team environments.",
+      "Communicates analytical findings clearly to cross-functional teammates and stakeholders.",
   },
 ];
 

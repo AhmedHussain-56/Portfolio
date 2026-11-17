@@ -11,13 +11,13 @@ import {
 const experiences = [
   {
     id: 1,
-    title: "Flutter Intern",
+    title: "Flutter Development Intern",
     company: "Team Up Company",
     location: "IT Tower, Karimnagar",
     period: "Dec 2025 – March 2026",
     description:
-      "Designed and implemented Flutter UI screens for a Health Diary application. Created intuitive, performant, and user-friendly interfaces for health tracking features.",
-    skills: ["Flutter", "Dart", "UI/UX", "Mobile Development"],
+      "Designed and implemented Flutter UI screens for a Health Diary application. Collaborated on application development, user-friendly health tracking features, and UI implementation.",
+    skills: ["Flutter", "UI/UX", "App Design", "Team Collaboration"],
     current: false,
   },
 ];

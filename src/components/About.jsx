@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { HiCode, HiLightningBolt, HiAcademicCap } from "react-icons/hi";
+import { HiAcademicCap } from "react-icons/hi";
+import { FaDatabase, FaChartLine } from "react-icons/fa";
 
 function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: HiCode, value: "10+", label: "Projects Built" },
-    { icon: HiLightningBolt, value: "4+", label: "Core Technologies" },
-    { icon: HiAcademicCap, value: "8.24", label: "CGPA" },
+    { icon: FaDatabase, value: "SQL & Python", label: "Core Stack" },
+    { icon: FaChartLine, value: "EDA & BI", label: "Analytics & Viz" },
+    { icon: HiAcademicCap, value: "8.24", label: "B.Tech CGPA" },
   ];
 
   return (
@@ -119,20 +120,18 @@ function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h3 className="text-2xl font-outfit font-semibold mb-4 text-white">
-                Building Modern Apps with Clean Code
+                Transforming Data into Meaningful Insights
               </h3>
               <p className="text-slate-400 leading-relaxed mb-6">
-                I'm a B.Tech CSE Graduate at Sree Chaitanya College of
-                Engineering, Karimnagar, skilled in C, Python, SQL, and Flutter.
-                I specialize in developing mobile and web applications with a
-                strong focus on performance, clean UI design, and seamless user
-                experience.
+                I'm a B.Tech Computer Science graduate from Sree Chaitanya College of
+                Engineering, Karimnagar, specializing in Data Analytics with hands-on
+                knowledge of Python, SQL, Excel, and Power BI.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
-                From building medical AI systems with Deep Learning to
-                engineering intuitive cross-platform Flutter applications, I
-                love solving complex problems and continuously enhancing modern
-                app development techniques.
+                Skilled in data cleaning, exploratory data analysis (EDA), database
+                querying, and data interpretation. Experienced in developing AI/ML-based
+                projects, conducting model performance evaluations, and translating complex
+                datasets into actionable business insights.
               </p>
 
               {/* Stats */}
